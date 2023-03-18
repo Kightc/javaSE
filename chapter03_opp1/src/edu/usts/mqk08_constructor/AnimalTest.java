@@ -9,6 +9,7 @@ package edu.usts.mqk08_constructor;
  */
 public class AnimalTest {
     public static void main(String[] args) {
+        System.out.println(1);
         Animal animal1 = new Animal();
         animal1.name = "金蟾";
         animal1.setLegs(4);
