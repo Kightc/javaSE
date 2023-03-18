@@ -18,6 +18,7 @@ public class AnimalTest {
 }
 class Animal{
     String name;
+    String hobby;
     private int legs;//private声明为私有的，外部想要直接调用时调用不出的，外部只能通过setLegs()方法来间接的赋值
 
     //获取legs的属性值
