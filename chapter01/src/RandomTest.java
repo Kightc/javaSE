@@ -9,7 +9,7 @@ public class RandomTest {
         int a = 3;
         int b =100;
         //获取指定范围的随机整数[a,b]
-         int a2 = (int)(Math.random() * (b - a + 1)) + a;
+         int a2 = (int)(Math.random() * (b - a + 1) + a);
         System.out.println("a2=" + a2);
 
     }

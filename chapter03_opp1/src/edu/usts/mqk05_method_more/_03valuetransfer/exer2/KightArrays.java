@@ -142,7 +142,7 @@ public class KightArrays {
      * @param i 指定数组的元素位置
      * @param j 指定数组的元素位置
      */
-    public void swap(int[] arr, int i, int j){//形参列表中int[] arr 的作用是确定指定的数组，然后再在
+    private void swap(int[] arr, int i, int j){//形参列表中int[] arr 的作用是确定指定的数组，然后再在
         //此数组中修改对应的元素，这样元素修改的值才才能够保存 (即修改指定对象的属性)
         int temp = arr[i];
         arr[i] = arr[j];
