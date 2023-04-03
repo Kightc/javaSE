@@ -1,6 +1,7 @@
 package edu.usts.mqk09_bean_uml;
 
 
+import java.sql.DatabaseMetaData;
 import java.sql.Date;
 
 /**
@@ -28,31 +29,31 @@ public class Customer {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setId(int i) {
+        id = i;
     }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String n) {
+        name = n;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmail(String e) {
+        email = e;
     }
 
     public Date getBirth() {
         return birth;
     }
 
-    public void setBirth(Date birth) {
-        this.birth = birth;
+    public void setBirth(Date b) {
+        birth = b;
     }
 }
