@@ -1,0 +1,71 @@
+
+面向对象的特征之三：多态性
+
+1.如何理解多态性
+    理解：理解为一个事物的多种形态
+
+    生活举例：
+        我想养一只宠物----宠物
+        我想要一个玩具----玩具
+
+
+2.Java中多态性的体现：
+    父类的引用指向子类的对象 或(子类的对象赋给父类的引用
+    比如：Person p2 = new Man();
+
+
+3.多态性的应用：
+    多态性的应用:虚拟方法调用 或(虚方法调用)
+        在多态的场景下调用方法时
+            编译时，认为方法时左边声明的父类的类型(被重写的方法)
+            执行时，实际执行的是子类重写父类的方法
+        简称为：编译看左边，运行看右边
+
+4.多态性的使用前提：
+    ①要有类的继承关系
+    ②要有方法的重写
+
+5.多态的适用性
+    使用与方法，不适用于属性
+
+6.多态性的好处与弊端
+    6.1 弊端
+        在多态的场景下，我们创建了子类的对象，也加载了子类特有的属性和方法，但是由于声明为父类的类型，导致我们
+        没有办法直接调用子类特有的属性和方法
+
+    6.2 好处
+        极大地减少了代码的冗余，不需要定义多个重载的方法
+
+        举例：
+            class Account{
+                public void withdraw(){//取钱
+
+                }
+            }
+            class CheckAccount extends Account{//信用卡
+                //存在方法的重写
+                public void withdraw(){//取钱
+
+                }
+            }
+            class SavingAccount extends Account{//储蓄卡
+                //存在方法的重写
+            }
+
+            class Customer{
+                Account account;
+                public void setAccount(Account account){
+                    this.account = account;
+                }
+                public Account getAccount(){
+                    return account;
+                }
+            }
+
+            class CustomerTest{
+                main(){
+                    Customer cust = new Customer();
+                    cust.setAccount(new CheckAccount());
+                    cust.getAccount.withdraw();
+                }
+            }
