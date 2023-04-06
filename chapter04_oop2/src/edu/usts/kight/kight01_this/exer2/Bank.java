@@ -1,6 +1,5 @@
 package edu.usts.kight.kight01_this.exer2;
 
-import javafx.beans.binding.NumberBinding;
 
 /**
  * Description:
