@@ -58,6 +58,19 @@ Object类的概述
 
     4.toString()的使用
         4.1Object类中的toString()的定义
-
+            public String toString() {
+                return getClass().getName() + "@" + Integer.toHexString(hashCode());
+            }
 
         4.2开发中使用的场景
+            平时我们在调用System.out.println()打印对象引用变量时，其是就调用了对象的toString()
+
+        4.3 子类使用说明
+            ① 自定义的类
+                在没有重写Object类的toString()的情况下默认返回的是当前对象的地址
+            ② 像String、File、Date或包装类等Object的子类都重写了Object类的toString()，在调用时
+               返回当前对象的实体内容
+
+        4.4 开发中使用说明：
+            习惯上，开发中对于自定义的类在调用toString()时，也希望显示对象的实体内容，而非地址值。
+            这时候就需要重写Object类中的toString()
