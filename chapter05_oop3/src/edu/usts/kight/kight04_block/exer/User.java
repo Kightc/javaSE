@@ -22,7 +22,7 @@ public class User {
 //        Date date = new Date(System.currentTimeMillis());
 //        registrationTime = date;
         registrationTime = System.currentTimeMillis();//获取当前时间(距离1970-1-1-00:00到现在的毫秒数)
-        userName = System.currentTimeMillis() + "";
+        userName = System.currentTimeMillis() + " ";
         password = "123456";
     }
     public User(String userName, String password){
